@@ -11,6 +11,9 @@ import { ProyectoComponent } from './proyecto/proyecto.component';
 import { RecursoComponent } from './recurso/recurso.component';
 import { ReporteComponent } from './reporte/reporte.component';
 
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,9 @@ import { ReporteComponent } from './reporte/reporte.component';
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    CommonModule, 
+    FormsModule
   ],
   exports: [
     MatButtonModule,
@@ -35,3 +40,4 @@ import { ReporteComponent } from './reporte/reporte.component';
 })
 export class AppModule { }
 export class MaterialModule { }
+export class ProyectoModule { }

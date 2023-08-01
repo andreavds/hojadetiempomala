@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { NotificacionComponent } from './notificacion/notificacion.component';
+
 
 @Component({
   selector: 'app-root',
@@ -13,4 +16,11 @@ export class AppComponent {
   wrongPlace = "la luna";
   img = 'https://media.tenor.com/ZhM2wKMMnb8AAAAd/go-to-moon-skips.gif';
   btnDisabled = true;
+
+
+  constructor(private dialog: MatDialog) {}
+
+  openNotificacion(): void {
+    this.dialog.open(NotificacionComponent);
+  }
 }
